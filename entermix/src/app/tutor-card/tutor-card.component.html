@@ -1,0 +1,27 @@
+<mat-card>
+  <section class="container">
+    <a href="contato"><img [src]="photo" /></a>
+
+    <!--<div class="info">
+    <span>{{location}}</span>
+    <span >{{name}}</span>
+  </div>
+  <div class="info">
+    <span>{{services }}</span>
+    <span>{{zodiac}}</span>
+  </div>-->
+
+    <div class="item">
+      <span>Local: {{ location }}</span>
+    </div>
+    <div class="item">
+      <span>Tutor: {{ name }}</span>
+    </div>
+    <div class="item flex">
+      <span>Especialidades: {{ services }}</span>
+    </div>
+    <div class="item">
+      <span>Signo: {{ zodiac }}</span>
+    </div>
+  </section>
+</mat-card>
