@@ -1,0 +1,85 @@
+<mat-card class="card-container">
+  <form [formGroup]="form" class="formContainer">
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Nome"
+        class="form-control"
+        formControlName="name"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Location</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Location"
+        class="form-control"
+        formControlName="location"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label> Photo </mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Photo"
+        class="form-control"
+        formControlName="photo"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Services</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Services"
+        class="form-control"
+        formControlName="services"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Zodiac</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Zodiac"
+        class="form-control"
+        formControlName="zodiac"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contact</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Contact"
+        class="form-control"
+        formControlName="contact"
+        required
+      />
+    </mat-form-field>
+    <button type="button" [disabled]="form.invalid" mat-raised-button (click)="submitCadastro()">Enviar</button>
+  </form>
+</mat-card>
+
+<mat-card *ngIf="retorno">
+  <div class="">Cadastrado com sucesso :</div>
+  <div class="">{{ retorno.id }}</div>
+  <div class="">{{ retorno.name }}</div>
+  <div class="">{{ retorno.services }}</div>
+  <div class="">{{ retorno.location }}</div>
+  <div class="">{{ retorno.zodiac }}</div>
+  <div class="">{{ retorno.contact }}</div>
+</mat-card>

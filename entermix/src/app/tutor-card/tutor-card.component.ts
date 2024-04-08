@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { InterMixModelService } from 'src/app/services/inter-mix-model.service'
+import { Profissionais } from 'src/app/services/inter-mix-model.service'
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TutorCardComponent implements OnChanges {
 
-  @Input() tutor: InterMixModelService;
+  @Input() tutor: Profissionais;
 
   location: string;
   name: string;

@@ -1,4 +1,5 @@
-export class InterMixModelService {
+export class Profissionais {
+  id:number;
   location: string;
   name: string;
   photo: string;

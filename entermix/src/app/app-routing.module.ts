@@ -9,6 +9,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import {ContatoComponent} from './contato/contato/contato.component'
 import { TutorPageComponent } from './tutor-page/tutor-page.component';
 import { PassaTemposComponent } from './passaTempos/passa-tempos/passa-tempos.component'
+import { CadastrarProfissionaisComponent } from './cadastrar-profissionais/cadastrar-profissionais.component';
 
 const routes: Routes = [
 {
@@ -38,6 +39,10 @@ const routes: Routes = [
     {
       path:'yoga',
       component: TutorPageComponent
+    },
+    {
+      path:'cadastro',
+      component: CadastrarProfissionaisComponent,
     }
   ]
 }

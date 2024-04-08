@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 
-
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,22 +13,26 @@ import { MixcompComponent } from './mixcomp/mixcomp.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MixCardComponent } from './mixcomp/mix-card/mix-card.component';
 import { MenuPageLayoutComponent } from './mixcomp/menu-page-layout/menu-page-layout.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { from } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { core } from '@angular/compiler';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { TutorCardComponent } from './tutor-card/tutor-card.component';
 import { TutorPageComponent } from './tutor-page/tutor-page.component';
-import {MatIconModule} from '@angular/material/icon';
-import {LOCALE_ID } from '@angular/core';
-import {registerLocaleData} from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import locatePT from '@angular/common/locales/pt';
 import { PassaTemposComponent } from './passaTempos/passa-tempos/passa-tempos.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { CadastrarProfissionaisComponent } from './cadastrar-profissionais/cadastrar-profissionais.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
-registerLocaleData(locatePT, 'pt-BR')
+registerLocaleData(locatePT, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ registerLocaleData(locatePT, 'pt-BR')
     MenuPageLayoutComponent,
     TutorCardComponent,
     TutorPageComponent,
-    PassaTemposComponent
+    PassaTemposComponent,
+    CadastrarProfissionaisComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,11 +60,17 @@ registerLocaleData(locatePT, 'pt-BR')
     MatIconModule,
     HttpClientModule,
     MatButtonModule,
-
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
-  providers: [{
-    provide: LOCALE_ID, useValue: 'pt-BR'
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR',
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

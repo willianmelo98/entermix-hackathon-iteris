@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { InterMixModelService } from 'src/app/services/inter-mix-model.service'
+import { Profissionais } from 'src/app/services/inter-mix-model.service'
 import { InterMixServiceService } from 'src/app/services/inter-mix-service.service'
 
 @Component({
@@ -9,7 +9,7 @@ import { InterMixServiceService } from 'src/app/services/inter-mix-service.servi
 })
 export class TutorPageComponent implements OnInit {
 
-  listaTutores: InterMixModelService[];
+  listaTutores: Profissionais[];
 
   constructor(public tutorApi: InterMixServiceService) { }
 
