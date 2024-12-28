@@ -25,7 +25,7 @@
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label> Photo </mat-label>
+      <mat-label> Photo URL </mat-label>
       <input
         matInput
         type="text"
@@ -70,16 +70,24 @@
         required
       />
     </mat-form-field>
-    <button type="button" [disabled]="form.invalid" mat-raised-button (click)="submitCadastro()">Enviar</button>
+    <button
+      type="button"
+      [disabled]="form.invalid"
+      mat-raised-button
+      (click)="submitCadastro()"
+    >
+      Enviar
+    </button>
   </form>
 </mat-card>
 
 <mat-card *ngIf="retorno">
   <div class="">Cadastrado com sucesso :</div>
-  <div class="">{{ retorno.id }}</div>
-  <div class="">{{ retorno.name }}</div>
-  <div class="">{{ retorno.services }}</div>
-  <div class="">{{ retorno.location }}</div>
-  <div class="">{{ retorno.zodiac }}</div>
-  <div class="">{{ retorno.contact }}</div>
+  <img *ngIf="retorno.photo" [src]="retorno.photo" />
+  <div class="">ID: {{ retorno.id }}</div>
+  <div class="">Name: {{ retorno.name }}</div>
+  <div class="">Services: {{ retorno.services }}</div>
+  <div class="">Location: {{ retorno.location }}</div>
+  <div class="">Zodiac: {{ retorno.zodiac }}</div>
+  <div class="">Contact: {{ retorno.contact }}</div>
 </mat-card>
